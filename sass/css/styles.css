@@ -1,1 +1,47 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-nav_h {
+  margin-left: 2em;
+  margin-top: .5em;
+}
+
+.main-nav_ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.main-nav .main-nav_ul li {
+  margin-right: 1em;
+}
+
+.main-nav .header-cart-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 1em;
+  width: 100%;
+  margin-right: 1em;
+}
+/*# sourceMappingURL=styles.css.map */
