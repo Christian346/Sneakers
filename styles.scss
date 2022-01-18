@@ -1,4 +1,5 @@
 @import "config";
+@import "mixins";
 *{
     margin:0;
     padding:0;
@@ -11,6 +12,7 @@ body{
 
 .main-nav{
     display: flex;
+    margin-bottom:2em;
     &_h{
         margin-left: 2em;
         margin-top: .5em;
@@ -34,3 +36,67 @@ body{
         margin-right: 1em;
     }
 }
+.bothsides{
+    width:100%;
+    display: flex;
+    margin-top:3em;
+}
+.leftside{
+    width:50%;
+}
+.main-img{
+    @include justifyflexcenter();
+    width: 100%;
+}
+.lower-imgs{
+    @include justifyflexcenter();
+    width: 100%;
+    margin-top: 1em;
+    
+}
+.big-img{
+    width:400px;
+     height:300px;
+     border-radius: 20px;
+
+}
+.small-img{
+    width:87px; 
+    height:90px;
+    margin:.5em;
+    border-radius: 20px;
+}
+
+.rightside{
+    width:50%;
+    &_h4{
+        color:$Orange;
+        margin-bottom:1.5em;
+    }
+    &_h1{
+        margin-bottom:1em;
+    }
+    &_p1{
+        margin-bottom:1em;
+    }
+
+    .prices-div{
+        display: flex;
+    }
+
+    &_p2{
+        font-weight:bolder;
+        margin-right: .5em;
+    }
+    &_p3{
+        font-weight: bolder;
+    }
+    &_p4{
+        font-weight: bold;
+        text-decoration: line-through;
+    }
+    .addcart-div{
+        margin-top: 1em;
+    }
+}
+
