@@ -8,28 +8,45 @@
 
 body{
     font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 .main-nav{
+    width: 80%;
     display: flex;
-    margin-bottom:2em;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
     &_h{
+        font-size: 2rem;
+        font-weight: 700;
         margin-left: 2em;
-        margin-top: .5em;
+        margin-top: .1em;
     }
 
     &_ul{
         display: flex;
         list-style: none;
         margin-left: 2em;
-        margin-top: 1em;
+        margin-top: 1em; 
+    }
+    .cart{
+        margin-right: 3em;
+    }
+    .face{
+        
+        height: auto;
+        width: 40px;
     }
     .main-nav_ul li{
-        margin-right: 1em;
+        margin-right: 1.7em;
+        color: $Dark-grayish-blue;
     }
 
     .header-cart-div{
         display: flex;
+        align-items: center;
         justify-content: flex-end;
         margin-top: 1em;
         width: 100%;
@@ -40,9 +57,16 @@ body{
     width:100%;
     display: flex;
     margin-top:3em;
+    margin: 3em;
+}
+.hr{
+    color: $Light-grayish-blue;
+    margin: 0 auto;
+    width: 72%;
 }
 .leftside{
     width:50%;
+    margin-right: 3em;
 }
 .main-img{
     @include justifyflexcenter();
@@ -66,37 +90,100 @@ body{
     margin:.5em;
     border-radius: 20px;
 }
+.small-img:hover{
+    cursor: pointer;
+    border: 3px solid $Orange;
+    filter: grayscale(30%);
+   
+   
+}
 
 .rightside{
-    width:50%;
+    width:30%;
     &_h4{
         color:$Orange;
+        letter-spacing: .2em;
         margin-bottom:1.5em;
     }
     &_h1{
         margin-bottom:1em;
     }
     &_p1{
+        color: $Dark-grayish-blue;
+        line-height: 2em;
         margin-bottom:1em;
     }
 
     .prices-div{
         display: flex;
+        align-items: center;
+        margin-bottom: 1em;
     }
 
     &_p2{
+        font-size: 1.5rem;
         font-weight:bolder;
         margin-right: .5em;
     }
     &_p3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 30px;
         font-weight: bolder;
+        background-color: $Pale-orange;
+        color: $Orange;
+        margin-right: 1em;
     }
     &_p4{
+        color:$Grayish-blue;
         font-weight: bold;
         text-decoration: line-through;
     }
     .addcart-div{
+        display: flex;
         margin-top: 1em;
     }
+    .addnumbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $Light-grayish-blue;
+       height: 50px;
+       width:150px;
+       border-radius: 10px;
+    }
+    .addnumbox p {
+        font-weight: 800;
+        margin-left: 2.8em;
+        margin-right: 2.8em;
+        
+    }
+    .sign{
+        cursor: pointer;
+    }
+    .orange-btn{
+
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $Orange;
+        color:white;
+        border:none;
+        border-radius: 10px;
+        width: 250px;
+        height: 50px;
+        margin-left: 1em;
+
+    }
+    .orange-btn:hover{
+   filter: grayscale(10%);
+    }
+    .white-cart{
+        margin-right: 1em;
+    }
+   
 }
 
