@@ -1,0 +1,34 @@
+@mixin medquery(){
+    .main-nav{
+        .menu{
+            display: flex;
+            width: 35px;
+            margin-top: .2em;
+
+        }
+        &_ul{
+            display: none;
+        }
+        .cart{
+            width: 35px;
+            margin-right: 2em;
+        }
+    }
+   
+    .hr{
+        display: none;
+    }
+ .bothsides{
+  margin:0;
+  flex-direction: column;
+  align-items: center;
+ }
+ //.leftside{
+  //   width: 100%;
+ //}
+ //.big-img{
+ //    width: 100%;
+ //}
+
+}
+
