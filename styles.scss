@@ -39,6 +39,7 @@ body{
         margin-right: 3em;
     }
     .face{
+        margin-top: -.1em;
         height: auto;
         width: 40px;
     }
@@ -73,6 +74,20 @@ body{
     width:50%;
     margin-right: 3em;
 }
+.prevandnext{
+    width: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.circle-grey{
+    width: 30px;
+    background-color: $Light-grayish-blue
+}
+
+
+
 .main-img{
     @include justifyflexcenter();
     width: 100%;

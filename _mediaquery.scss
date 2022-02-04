@@ -1,17 +1,26 @@
 @mixin medquery(){
     .main-nav{
+        width: 90%;
+        margin-top: 1em;
+        margin-bottom: 1em;
         .menu{
             display: flex;
             width: 35px;
-            margin-top: .2em;
+            margin-top: .6em;
 
+        }
+        &_h{
+            margin-left:.4em
         }
         &_ul{
             display: none;
         }
         .cart{
-            width: 35px;
-            margin-right: 2em;
+            //width: 30px;
+            margin-right: 1em;
+        }
+        .face{
+            width: 16%;
         }
     }
    
@@ -23,12 +32,77 @@
   flex-direction: column;
   align-items: center;
  }
- //.leftside{
-  //   width: 100%;
- //}
- //.big-img{
- //    width: 100%;
- //}
+ .leftside{
+     width: 100%;
+     margin-right: 0;
+ }
+ .big-img{
+     width: 100%;
+     border-radius:0px;
+ }
+ .lower-imgs{
+     display: none;
+ }
+ .prevandnext{
+    width: 100%;
+   
+}
+//
+.rightside{
+    width:90%;
+    &_h4{
+        font-size:0.8rem;
+        letter-spacing: .1em;
+    }
+   
+    &_p1{
+        //to change!
+        font-size: 0.9rem;
+        margin-bottom: 1.5em;
+    }
+
+    &_p4{
+        display: none;
+    }
+    &_p4-small{
+        width:51vw; 
+        display: flex;
+        justify-content: flex-end;
+        color:$Grayish-blue;
+        font-weight: bold;
+        text-decoration: line-through;
+    }
+    .addcart-div{
+        width: 100%;
+        flex-direction: column; 
+        margin-top: 2em;  
+    }
+    .addnumbox{
+       width:100%;
+       margin-bottom: .7em;
+    }
+    .addnumbox p {
+        font-weight: 800;
+        margin-left: 35vw;
+        margin-right: 35vw;
+        
+    }
+    .sign{
+        cursor: pointer;
+    }
+    .orange-btn{
+        width:100%;
+        margin-left: 0em;
+
+    }
+    .orange-btn:hover{
+   filter: grayscale(10%);
+    }
+    .white-cart{
+        margin-right: 1em;
+    }
+}
+
 
 }
 

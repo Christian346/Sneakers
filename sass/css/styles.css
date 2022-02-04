@@ -48,6 +48,7 @@ body {
 }
 
 .main-nav .face {
+  margin-top: -.1em;
   height: auto;
   width: 40px;
 }
@@ -92,6 +93,23 @@ body {
 .leftside {
   width: 50%;
   margin-right: 3em;
+}
+
+.prevandnext {
+  width: 50%;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.circle-grey {
+  width: 30px;
+  background-color: #f7f8fd;
 }
 
 .main-img {
@@ -259,19 +277,29 @@ body {
 }
 
 @media screen and (max-width: 875px) {
+  .main-nav {
+    width: 90%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
   .main-nav .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 35px;
-    margin-top: .2em;
+    margin-top: .6em;
+  }
+  .main-nav_h {
+    margin-left: .4em;
   }
   .main-nav_ul {
     display: none;
   }
   .main-nav .cart {
-    width: 35px;
-    margin-right: 2em;
+    margin-right: 1em;
+  }
+  .main-nav .face {
+    width: 16%;
   }
   .hr {
     display: none;
@@ -285,6 +313,77 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .leftside {
+    width: 100%;
+    margin-right: 0;
+  }
+  .big-img {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .lower-imgs {
+    display: none;
+  }
+  .prevandnext {
+    width: 100%;
+  }
+  .rightside {
+    width: 90%;
+  }
+  .rightside_h4 {
+    font-size: 0.8rem;
+    letter-spacing: .1em;
+  }
+  .rightside_p1 {
+    font-size: 0.9rem;
+    margin-bottom: 1.5em;
+  }
+  .rightside_p4 {
+    display: none;
+  }
+  .rightside_p4-small {
+    width: 51vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    color: #b6bcc8;
+    font-weight: bold;
+    text-decoration: line-through;
+  }
+  .rightside .addcart-div {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 2em;
+  }
+  .rightside .addnumbox {
+    width: 100%;
+    margin-bottom: .7em;
+  }
+  .rightside .addnumbox p {
+    font-weight: 800;
+    margin-left: 35vw;
+    margin-right: 35vw;
+  }
+  .rightside .sign {
+    cursor: pointer;
+  }
+  .rightside .orange-btn {
+    width: 100%;
+    margin-left: 0em;
+  }
+  .rightside .orange-btn:hover {
+    -webkit-filter: grayscale(10%);
+            filter: grayscale(10%);
+  }
+  .rightside .white-cart {
+    margin-right: 1em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
