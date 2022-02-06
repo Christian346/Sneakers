@@ -96,8 +96,7 @@ body {
 }
 
 .prevandnext {
-  width: 50%;
-  background-color: red;
+  width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,11 +104,52 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
+  position: relative;
+  bottom: 220px;
 }
 
 .circle-grey {
-  width: 30px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
   background-color: #f7f8fd;
+}
+
+.arrow {
+  height: 25px;
+  width: 15px;
+}
+
+.left-arr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 1em;
+}
+
+.right-arr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 1em;
 }
 
 .main-img {
@@ -299,7 +339,8 @@ body {
     margin-right: 1em;
   }
   .main-nav .face {
-    width: 16%;
+    height: auto;
+    width: 40px;
   }
   .hr {
     display: none;

@@ -75,17 +75,41 @@ body{
     margin-right: 3em;
 }
 .prevandnext{
-    width: 50%;
-    background-color: red;
+    width: 400px;
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    position: relative;
+    bottom:220px;
 }
 .circle-grey{
-    width: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
     background-color: $Light-grayish-blue
 }
+.arrow{
+    height: 25px;
+    width: 15px;
+    
+}
+.left-arr{
+display: flex;
+ width: 50%;
+ justify-content: flex-start;
+ margin-left:1em;
+}
+.right-arr{
+ display: flex;
+ width: 50%;
+ justify-content: flex-end;
+ margin-right:1em;
 
+}
 
 
 .main-img{
