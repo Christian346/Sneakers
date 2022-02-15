@@ -11,7 +11,7 @@ body{
     font-size: 16px;
     font-family: 'Kumbh Sans', sans-serif;
 }
-
+//main nav nest
 .main-nav{
     width: 80%;
     display: flex;
@@ -57,6 +57,21 @@ body{
         margin-right: 1em;
     }
 }
+.cartbox-loc{
+    display:flex;
+    justify-content: flex-end;
+}
+.cartbox{
+   // visibility: hidden;
+    flex-direction: column;
+    width:25%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top:-2em;
+    margin-right: 3.5em;
+}
+.inner-cartbox{
+    display: flex;
+}
 
 .bothsides{
     width:100%;
@@ -68,7 +83,7 @@ body{
     color: $Light-grayish-blue;
     margin: 0 auto;
     width: 72%;
-    margin-bottom:6em;
+    //margin-bottom:6em;
 }
 .leftside{
     width:50%;
@@ -142,6 +157,7 @@ display: flex;
    
 }
 
+//right side nest
 .rightside{
     width:30%;
     &_h4{
@@ -157,12 +173,6 @@ display: flex;
         color: $Dark-grayish-blue;
         line-height: 1.6em;
         margin-bottom:1em;
-    }
-
-    .prices-div{
-        display: flex;
-        align-items: center;
-        margin-bottom: 1em;
     }
 
     &_p2{
@@ -186,52 +196,58 @@ display: flex;
         font-weight: bold;
         text-decoration: line-through;
     }
-    .addcart-div{
-        display: flex;
-        margin-top: 1em;
-    }
-    .addnumbox{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $Light-grayish-blue;
-       height: 50px;
-       width:150px;
-       border-radius: 10px;
-    }
-    .addnumbox p {
-        font-weight: 800;
-        margin-left: 2.8em;
-        margin-right: 2.8em;
-        
-    }
-    .sign{
-        cursor: pointer;
-    }
-    .orange-btn{
+    
+}
 
-        font-weight: bolder;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $Orange;
-        color:white;
-        border:none;
-        border-radius: 10px;
-        width: 250px;
-        height: 50px;
-        margin-left: 1em;
+.prices-div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.addcart-div{
+    display: flex;
+    margin-top: 1em;
+}
+.addnumbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $Light-grayish-blue;
+   height: 50px;
+   width:150px;
+   border-radius: 10px;
+}
+.addnumbox p {
+    font-weight: 800;
+    margin-left: 2.8em;
+    margin-right: 2.8em;
+    
+}
+.sign{
+    cursor: pointer;
+}
 
-    }
-    .orange-btn:hover{
-   filter: grayscale(10%);
-    }
-    .white-cart{
-        margin-right: 1em;
-    }
+.white-cart{
+    margin-right: 1em;
+}
 
+.orange-btn{
 
-   
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $Orange;
+    color:white;
+    border:none;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    margin-left: 1em;
+
+}
+.orange-btn:hover{
+filter: grayscale(10%);
 }
 
 @media screen and (max-width: 875px) {

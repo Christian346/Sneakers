@@ -73,6 +73,33 @@ body {
   margin-right: 1em;
 }
 
+.cartbox-loc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.cartbox {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: -2em;
+  margin-right: 3.5em;
+}
+
+.inner-cartbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .bothsides {
   width: 100%;
   display: -webkit-box;
@@ -87,7 +114,6 @@ body {
   color: #f7f8fd;
   margin: 0 auto;
   width: 72%;
-  margin-bottom: 6em;
 }
 
 .leftside {
@@ -214,16 +240,6 @@ body {
   margin-bottom: 1em;
 }
 
-.rightside .prices-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 1em;
-}
-
 .rightside_p2 {
   font-size: 1.5rem;
   font-weight: bolder;
@@ -254,14 +270,24 @@ body {
   text-decoration: line-through;
 }
 
-.rightside .addcart-div {
+.prices-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1em;
+}
+
+.addcart-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 1em;
 }
 
-.rightside .addnumbox {
+.addnumbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,17 +303,21 @@ body {
   border-radius: 10px;
 }
 
-.rightside .addnumbox p {
+.addnumbox p {
   font-weight: 800;
   margin-left: 2.8em;
   margin-right: 2.8em;
 }
 
-.rightside .sign {
+.sign {
   cursor: pointer;
 }
 
-.rightside .orange-btn {
+.white-cart {
+  margin-right: 1em;
+}
+
+.orange-btn {
   font-weight: bolder;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -307,13 +337,9 @@ body {
   margin-left: 1em;
 }
 
-.rightside .orange-btn:hover {
+.orange-btn:hover {
   -webkit-filter: grayscale(10%);
           filter: grayscale(10%);
-}
-
-.rightside .white-cart {
-  margin-right: 1em;
 }
 
 @media screen and (max-width: 875px) {
