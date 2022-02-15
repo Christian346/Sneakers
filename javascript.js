@@ -8,13 +8,19 @@ shopCartTop.addEventListener('click' ,() =>{
 let amount = document.querySelector('.amount')
 let minus = document.querySelector('.minus');
 let plus = document.querySelector('.plus');
+var count=0;
 
 
-minus.addEventListener('click', ()=>{
-   console.log('clicked less')
-})
+minus.addEventListener('click', decrement)
+plus.addEventListener('click', increment)
+function decrement(){
+    if(count > 0)
+    count--;
+    amount.innerHTML = count;
+}
+function increment(){
+    count++;
+    amount.innerHTML = count;
+}
 
-plus.addEventListener('click', ()=>{
-    console.log('clicked more')
- })
 
