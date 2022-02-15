@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <script src="javascript.js" async></script>
 </head>
 <body>
     <header>
@@ -29,24 +30,31 @@
         </nav>
     </header>
     <hr class="hr">
+
     <div class="cartbox-loc">
+
     <div class="cartbox">
-        <p>Cart</p>
-        <hr>
+        <b><p>Cart</p></b>
+        <hr class="hr-cart">
         <div class="inner-cartbox">
-            <img src="" alt="">
+            <div class="thumbnail-cart">
+                <img src="images/image-product-2-thumbnail.jpg" class="res-img" alt="">
+            </div>
+            
             <p> Fall Limited Edition Sneakers <br>
             $125.00 x 3 $375.00</p>
-            <div>
+            <div class ="cart-trash">
                 <img src="images/icon-delete.svg" alt="">
             </div>
         </div>
+           <div class="button-cart-pos">
             <button class="orange-btn">Checkout</button>
-        
+           </div>
+
     </div>
 </div>
-    <div class="bothsides">
 
+    <div class="bothsides">
         <div class="leftside">
         <div class="main-img">
             <img src="images/image-product-1.jpg" alt="" class="big-img">
@@ -87,9 +95,9 @@
 
             <div class="addcart-div">
             <div class="addnumbox">
-                <img src="images/icon-minus.svg" alt="" class="sign">
-                <p>0</p>
-                <img src="images/icon-plus.svg" alt="" class="sign">
+                <img src="images/icon-minus.svg" alt="" class="sign minus">
+                <p class="amount">0</p>
+                <img src="images/icon-plus.svg" alt="" class="sign plus">
             </div>
             <button class="orange-btn"><img src="images/icon-cart.svg" alt="" class="white-cart">  Add to cart</button>
             </div>

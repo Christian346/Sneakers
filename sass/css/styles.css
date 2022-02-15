@@ -44,6 +44,7 @@ body {
 }
 
 .main-nav .cart {
+  cursor: pointer;
   margin-right: 3em;
 }
 
@@ -73,7 +74,35 @@ body {
   margin-right: 1em;
 }
 
+.orange-btn {
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ff7d1a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  margin-left: 1em;
+}
+
+.orange-btn:hover {
+  -webkit-filter: grayscale(10%);
+          filter: grayscale(10%);
+}
+
 .cartbox-loc {
+  position: relative;
+  z-index: 2;
+  height: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,6 +112,11 @@ body {
 }
 
 .cartbox {
+  visibility: hidden;
+  min-height: 230px;
+  background-color: white;
+  position: relative;
+  z-index: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -94,10 +128,44 @@ body {
   margin-right: 3.5em;
 }
 
+.visible {
+  visibility: visible;
+}
+
+.cartbox p {
+  margin: 1em;
+}
+
 .inner-cartbox {
+  margin-top: 1em;
+  margin-bottom: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.thumbnail-cart {
+  margin-left: 1em;
+  height: 40px;
+  width: 70px;
+}
+
+.res-img {
+  height: auto;
+  width: 100%;
+}
+
+.cart-trash {
+  margin-top: 1.2em;
+}
+
+.button-cart-pos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .bothsides {
@@ -114,6 +182,7 @@ body {
   color: #f7f8fd;
   margin: 0 auto;
   width: 72%;
+  margin-bottom: 1em;
 }
 
 .leftside {
@@ -304,6 +373,7 @@ body {
 }
 
 .addnumbox p {
+  cursor: pointer;
   font-weight: 800;
   margin-left: 2.8em;
   margin-right: 2.8em;
@@ -311,35 +381,11 @@ body {
 
 .sign {
   cursor: pointer;
+  width: 13px;
 }
 
 .white-cart {
   margin-right: 1em;
-}
-
-.orange-btn {
-  font-weight: bolder;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #ff7d1a;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  width: 250px;
-  height: 50px;
-  margin-left: 1em;
-}
-
-.orange-btn:hover {
-  -webkit-filter: grayscale(10%);
-          filter: grayscale(10%);
 }
 
 @media screen and (max-width: 875px) {
