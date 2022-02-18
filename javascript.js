@@ -1,3 +1,19 @@
+//open mini menu
+let menu = document.querySelector('.menu');
+let ul = document.querySelector('.main-nav_ul')
+
+menu.addEventListener('click',()=>{
+    ul.classList.toggle('visible');
+})
+//close mini menu
+let menux = document.querySelector('#x');
+
+menux.addEventListener('click',()=>{
+ul.classList.toggle('visible')
+console.log("clicked")
+})
+
+//cart box
 let shopCartTop = document.querySelector('.cart');
 let cartbox = document.querySelector('.cartbox');
 
@@ -5,11 +21,11 @@ shopCartTop.addEventListener('click' ,() =>{
  cartbox.classList.toggle('visible')
 });
 
+//counter
 let amount = document.querySelector('.amount')
 let minus = document.querySelector('.minus');
 let plus = document.querySelector('.plus');
 var count=0;
-
 
 minus.addEventListener('click', decrement)
 plus.addEventListener('click', increment)
@@ -22,5 +38,7 @@ function increment(){
     count++;
     amount.innerHTML = count;
 }
+//function to save goes below
+
 
 

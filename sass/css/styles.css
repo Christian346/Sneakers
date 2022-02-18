@@ -34,6 +34,10 @@ body {
   margin-top: .1em;
 }
 
+.main-nav #x {
+  display: none;
+}
+
 .main-nav_ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,11 +394,15 @@ body {
 
 @media screen and (max-width: 875px) {
   .main-nav {
+    height: 70px;
+    position: relative;
+    z-index: 2;
     width: 90%;
     margin-top: 1em;
     margin-bottom: 1em;
   }
   .main-nav .menu {
+    cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -404,15 +412,44 @@ body {
   .main-nav_h {
     margin-left: .4em;
   }
+  .main-nav #x {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    top: 2em;
+    width: 20px;
+    padding-bottom: 6em;
+  }
   .main-nav_ul {
-    display: none;
+    visibility: hidden;
+    margin-top: -1em;
+    margin-right: -60%;
+    padding-left: 2em;
+    width: 60vw;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    z-index: 3;
+    right: 100%;
+    top: 0;
+    color: black;
+    font-weight: 800;
+    background-color: white;
+    line-height: 3em;
   }
   .main-nav .cart {
-    margin-right: 1em;
+    margin-left: -2.2em;
+    margin-right: .5em;
   }
   .main-nav .face {
     height: auto;
     width: 40px;
+  }
+  .main-nav .visible {
+    visibility: visible;
   }
   .hr {
     display: none;
