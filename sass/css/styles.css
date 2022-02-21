@@ -305,10 +305,20 @@ body {
   border-radius: 20px;
 }
 
-.small-img {
-  width: 87px;
-  height: 90px;
+.active {
+  border: 3px solid #ff7d1a;
+}
+
+.thumbbox {
+  width: 88px;
+  height: 88px;
   margin: .5em;
+  border-radius: 20px;
+}
+
+.small-img {
+  height: auto;
+  width: 100%;
   border-radius: 20px;
 }
 

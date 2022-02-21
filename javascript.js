@@ -38,7 +38,24 @@ function increment(){
     count++;
     amount.innerHTML = count;
 }
-//function to save goes below
+//function to save goes below?
+
+//gallery 
+
+let thumbpics = document.querySelectorAll('.thumbbox')
+
+thumbpics.forEach(img => {
+    img.addEventListener('click',onThumbClick);
+})
+
+function onThumbClick(event){
+    //clear active state for all thumbnails
+    thumbpics.forEach(img => {
+        img.classList.remove('active');
+    });
+    //set active thumbnail
+    event.target.parentElement.classList.add('active')
+}
 
 
 
