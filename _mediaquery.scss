@@ -25,6 +25,7 @@
           padding-bottom: 6em;
         }
         &_ul{
+            //could have been position fixed top left and right 0 with height 100vh
            visibility: hidden;
            margin-top: -1em;
            margin-right: -60%;
@@ -46,15 +47,35 @@
             margin-left: -2.2em;
             margin-right: .5em;
         }
+        .cartnum{
+            left:-1.5em;
+            margin-right:-1em;
+        }
         .face{
             height: auto;
             width: 40px;
         }
-        .visible{
-            visibility: visible;
-        }
+        
     }
-   
+    .cartbox{
+        visibility: hidden;
+        min-height: 360px;
+        width:90%;
+        margin-right: 1.2em;
+        border-radius: 10px;
+        margin-top: 1em;
+    }
+    .res-img{
+        margin-top: 1em;
+        }
+    .cart-trash{
+        margin-top: 2em;
+        margin-right:3em;
+    }
+    
+    .visible{
+        visibility: visible;
+    }
     .hr{
         display: none;
     }

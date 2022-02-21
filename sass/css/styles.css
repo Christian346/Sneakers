@@ -52,6 +52,19 @@ body {
   margin-right: 3em;
 }
 
+.main-nav .cartnum {
+  width: 30px;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #ff7d1a;
+  position: relative;
+  top: -1em;
+  left: -3.8em;
+  margin-right: -2em;
+}
+
 .main-nav .face {
   margin-top: -.1em;
   height: auto;
@@ -157,6 +170,20 @@ body {
 .res-img {
   height: auto;
   width: 100%;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #68707d;
+  font-weight: 800;
+}
+
+.disp-none {
+  display: none;
+}
+
+.total-p {
+  font-weight: bold;
 }
 
 .cart-trash {
@@ -444,11 +471,30 @@ body {
     margin-left: -2.2em;
     margin-right: .5em;
   }
+  .main-nav .cartnum {
+    left: -1.5em;
+    margin-right: -1em;
+  }
   .main-nav .face {
     height: auto;
     width: 40px;
   }
-  .main-nav .visible {
+  .cartbox {
+    visibility: hidden;
+    min-height: 360px;
+    width: 90%;
+    margin-right: 1.2em;
+    border-radius: 10px;
+    margin-top: 1em;
+  }
+  .res-img {
+    margin-top: 1em;
+  }
+  .cart-trash {
+    margin-top: 2em;
+    margin-right: 3em;
+  }
+  .visible {
     visibility: visible;
   }
   .hr {

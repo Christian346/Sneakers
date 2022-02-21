@@ -42,6 +42,18 @@ body{
         cursor: pointer;
         margin-right: 3em;
     }
+    .cartnum{
+        width: 30px;
+        color: $White;
+        font-weight: 800;
+        text-align: center;
+        border-radius: 10px;
+        background-color: $Orange;
+        position: relative;
+        top: -1em;
+        left:-3.8em;
+        margin-right:-2em;
+    }
     .face{
         margin-top: -.1em;
         height: auto;
@@ -119,6 +131,17 @@ filter: grayscale(10%);
 height: auto;
 width: 100%;
 }
+.empty-msg{
+    text-align: center;
+    color:$Dark-grayish-blue;
+    font-weight: 800;
+}
+.disp-none{
+    display:none;
+}
+.total-p{
+    font-weight: bold;
+}
 .cart-trash{
     margin-top: 1.2em;
 }
@@ -138,6 +161,7 @@ width: 100%;
     width: 72%;
     margin-bottom:1em;
 }
+//leftside
 .leftside{
     width:50%;
     margin-right: 3em;
