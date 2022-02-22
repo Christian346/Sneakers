@@ -48,6 +48,8 @@ thumbpics.forEach(img => {
     img.addEventListener('click',onThumbClick);
 })
 
+let bigImg = document.querySelector('.big-img')
+
 function onThumbClick(event){
     //clear active state for all thumbnails
     thumbpics.forEach(img => {
@@ -55,7 +57,61 @@ function onThumbClick(event){
     });
     //set active thumbnail
     event.target.parentElement.classList.add('active')
+  
+    //update main image
+    bigImg.src = event.target.src.replace('-thumbnail','')
 }
+
+
+//buttons
+let btnNext = document.querySelector('.right-arr')
+let btnPrev = document.querySelector('.left-arr')
+//buttons event
+btnNext.addEventListener('click', btnClikedNext)
+btnPrev.addEventListener('click', btnClikedPrev)
+
+function btnClikedNext(){
+    let imageIndex = getCurrentImgArr();
+    imageIndex++;
+
+    if(imageIndex > 4){
+        imageIndex = 1;
+    }
+    setBigImg(imageIndex)
+}
+
+function btnClikedPrev()
+{
+    let imageIndex = getCurrentImgArr();
+    imageIndex--;
+
+    if(imageIndex < 1){
+        imageIndex = 4;
+    }
+    setBigImg(imageIndex)
+
+}
+
+function getCurrentImgArr(){
+    const imageIndex =  parseInt(bigImg.src.split('\\').pop().split('/').pop().replace('.jpeg', '').replace('image-product-',''));
+    return imageIndex; //console.log(imageIndex);
+}
+
+function setBigImg(imageIndex){
+   bigImg.src =`./images/image-product-${imageIndex}.jpg`;
+  
+   //sync pics
+   thumbpics.forEach(img => {
+       img.classList.remove('active');
+   })
+   //set active pic
+   thumbpics[imageIndex-1].classList.add('active');
+}
+// gallery finished
+
+
+
+
 
 
 
