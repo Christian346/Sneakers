@@ -1,6 +1,7 @@
 @import "config";
 @import "mixins";
 @import "mediaquery";
+@import "overlay";
 *{
     margin:0;
     padding:0;
@@ -114,6 +115,9 @@ filter: grayscale(10%);
 }
 .visible{
     visibility: visible;
+}
+.invisible{
+    visibility:hidden;
 }
 .cartbox p{
     margin:1em;
@@ -318,7 +322,6 @@ display: flex;
 .white-cart{
     margin-right: 1em;
 }
-
 
 
 
