@@ -2,6 +2,7 @@
 @import "mixins";
 @import "mediaquery";
 @import "overlay";
+@import "secondp";
 *{
     margin:0;
     padding:0;
@@ -81,7 +82,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $Orange;
+    background-color:$Orange;
     color:white;
     border:none;
     border-radius: 10px;

@@ -28,9 +28,9 @@ let plus = document.querySelector('.plus');
 let productsInCart = 0;
 let productCounterValue = 1;
 
-
 minus.addEventListener('click', decrement)
 plus.addEventListener('click', increment)
+
 function increment(){
     //console.log(productCounterValue)
     setProductCounter(1);
@@ -39,6 +39,7 @@ function decrement(){
     setProductCounter(-1);
 }
 
+//set the counter number
 function setProductCounter(value){
     if((productCounterValue + value) > 0){
     productCounterValue += value;
@@ -46,13 +47,13 @@ function setProductCounter(value){
    }
 }
 
-
-
 //gallery section
 let thumbpics = document.querySelectorAll('.thumbbox')
+
 thumbpics.forEach(img => {
     img.addEventListener('click',onThumbClick);
 })
+
 //select big image
 let bigImg = document.querySelector('.big-img')
 
@@ -63,7 +64,6 @@ function onThumbClick(event){
     });
     //set active thumbnail
     event.target.parentElement.classList.add('active')
-  
     //update main image
     bigImg.src = event.target.src.replace('-thumbnail','') //change the name with empty
 }
@@ -212,6 +212,7 @@ function updateCheckoutButton(){
     }
 }
 
+
 //overlay
 let overLay = document.querySelector('.overlay')
 let overlayGallery;
@@ -249,6 +250,7 @@ function onBigImgClick(){
 
 
 
+//overlay actions 
 function onClickCloseOverlay(){
     overLay.classList.add('hidden');
 }

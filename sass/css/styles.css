@@ -39,6 +39,57 @@
   display: none;
 }
 
+.pinkhr {
+  color: hotpink;
+  margin: 0 auto;
+  width: 72%;
+  margin-bottom: 1em;
+}
+
+.pink {
+  color: hotpink;
+}
+
+.pink-btn {
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: hotpink;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  margin-left: 1em;
+}
+
+.cartnum-pink {
+  width: 30px;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  border-radius: 10px;
+  background-color: hotpink;
+  position: relative;
+  top: -1em;
+  left: -3.8em;
+  margin-right: -2em;
+}
+
+.rightside_h4-pink {
+  color: #fd9eae;
+  letter-spacing: .2em;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+
 * {
   margin: 0;
   padding: 0;
