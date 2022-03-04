@@ -1,35 +1,100 @@
+/**
+ localStorage.
+
+ getItem //gets item
+ removeItem//removes
+ setItem - takes 2 parameters a key and value 
+
+ localSotage.setItem('name1','bob')
+ cons log this localStorage.getItem('name1')
+
+ */
+
 //open mini menu
 let menu = document.querySelector('.menu');
 let ul = document.querySelector('.main-nav_ul')
-
-menu.addEventListener('click',()=>{
-    ul.classList.toggle('visible');
-})
 //close mini menu
 let menux = document.querySelector('#x');
-
-menux.addEventListener('click',()=>{
-ul.classList.toggle('visible')
-console.log("clicked")
-})
-
 // show cart box
 let shopCartTop = document.querySelector('.cart');
 let cartbox = document.querySelector('.cartbox');
-
-shopCartTop.addEventListener('click' ,() =>{
- cartbox.classList.toggle('visible')
-});
-
 //counter
 let amount = document.querySelector('.amount')
 let minus = document.querySelector('.minus');
 let plus = document.querySelector('.plus');
 let productsInCart = 0;
+//gallery section
+let thumbpics = document.querySelectorAll('.thumbbox')
+//select big image
+let bigImg = document.querySelector('.big-img')
+// prev and next buttons
+let btnNext = document.querySelector('.right-arr')
+let btnPrev = document.querySelector('.left-arr')
+//orange btn
+var count = 0;
+let cartCount = document.querySelector('#cartnumber');
+let addToCartBtn = document.querySelector('.btnBuy');
+let price = 250.0;
+let discount = 0.5;
+let msgEmpty = document.querySelector('.empty-msg');
+let productInShopCart = document.querySelector('.products-in-cart');
+let checkOut = document.querySelector('#checkout');
+
 let productCounterValue = 1;
 
+//overlay
+let overLay = document.querySelector('.overlay')
+let overlayGallery;
+let overlayBigImg;
+//lightbox
+let lightBox = document.querySelector('.lightbox')
+
+//girl page things
+let priceGirl =150;
+let discountGirl = 0.5
+
+
+
+
+
+//menu listener
+menu.addEventListener('click',()=>{
+    ul.classList.toggle('visible');
+})
+menux.addEventListener('click',()=>{
+ul.classList.toggle('visible')
+console.log("clicked")
+})
+//showcart box listener
+shopCartTop.addEventListener('click' ,() =>{
+ cartbox.classList.toggle('visible')
+});
+//counter listener
 minus.addEventListener('click', decrement)
 plus.addEventListener('click', increment)
+
+thumbpics.forEach(img => {
+    img.addEventListener('click',onThumbClick);
+})
+//buttons event
+btnNext.addEventListener('click', btnClikedNext)
+btnPrev.addEventListener('click', btnClikedPrev)
+// addtoCart listener
+//addToCartBtn.addEventListener('click', addToCart);
+
+//girl addToCart
+
+//big img change
+bigImg.addEventListener('click',onBigImgClick)
+
+
+//set the counter number
+function setProductCounter(value){
+    if((productCounterValue + value) > 0){
+        productCounterValue += value;
+        amount.innerHTML = productCounterValue;
+   }
+}
 
 function increment(){
     //console.log(productCounterValue)
@@ -38,24 +103,6 @@ function increment(){
 function decrement(){
     setProductCounter(-1);
 }
-
-//set the counter number
-function setProductCounter(value){
-    if((productCounterValue + value) > 0){
-    productCounterValue += value;
-    amount.innerHTML = productCounterValue;
-   }
-}
-
-//gallery section
-let thumbpics = document.querySelectorAll('.thumbbox')
-
-thumbpics.forEach(img => {
-    img.addEventListener('click',onThumbClick);
-})
-
-//select big image
-let bigImg = document.querySelector('.big-img')
 
 function onThumbClick(event){
     //clear active state for all thumbnails
@@ -67,14 +114,6 @@ function onThumbClick(event){
     //update main image
     bigImg.src = event.target.src.replace('-thumbnail','') //change the name with empty
 }
-
-
-// prev and next buttons
-let btnNext = document.querySelector('.right-arr')
-let btnPrev = document.querySelector('.left-arr')
-//buttons event
-btnNext.addEventListener('click', btnClikedNext)
-btnPrev.addEventListener('click', btnClikedPrev)
 
 function btnClikedNext(){
     let imageIndex = getCurrentImgArr();
@@ -98,7 +137,6 @@ function btnClikedPrev()
 }
 //clicking section ends
 
-
 //get current image in array used in clicked buttons
 function getCurrentImgArr(){
     const imageIndex =  parseInt(bigImg.src.split('\\').pop().split('/').pop().replace('.jpeg', '').replace('image-product-',''));
@@ -117,18 +155,6 @@ function setBigImg(imageIndex){
 }
 // gallery finished
 
-
-//orange btn
-var count =0;
-let cartCount = document.querySelector('#cartnumber');
-let addToCartBtn = document.querySelector('#btnBuy');
-let price = 250.0;
-let discount = 0.5;
-let msgEmpty = document.querySelector('.empty-msg');
-let productInShopCart = document.querySelector('.products-in-cart');
-let checkOut = document.querySelector('#checkout');
-
-addToCartBtn.addEventListener('click', addToCart);
 
 function addToCart(){
   productsInCart += productCounterValue;
@@ -155,6 +181,34 @@ function addToCart(){
   console.log(productsInCart);
 }
 
+
+
+//second page add to cart
+function addToCartGirlFunction(){
+    productsInCart += productCounterValue;
+    
+    const htmlDiv = `
+    <div class="item">
+    <div class="inner-cartbox">
+        <div class="thumbnail-cart">
+            <img src="images/image-product-5.jpg" class="res-img" alt="">
+        </div>
+        <p> Fall Limited Edition Sneakers <br>
+        ${(priceGirl * discountGirl).toFixed(2)} x <span class="quantity">${productsInCart} </span> <span class="total-p">${(priceGirl * discountGirl * productsInCart).toFixed(2)}</span></p>
+        <div class ="cart-trash">
+            <img src="images/icon-delete.svg" alt="">
+        </div>
+    </div>
+    `;
+    productInShopCart.innerHTML = htmlDiv;
+    
+    let deleteBtn = document.querySelector('.cart-trash')
+    deleteBtn.addEventListener('click',btnDeleteClick)
+  
+    updateCart();
+    console.log(productsInCart);
+  }
+  
 
 function updateCart(){
     updateCartIcon();
@@ -212,16 +266,6 @@ function updateCheckoutButton(){
     }
 }
 
-
-//overlay
-let overLay = document.querySelector('.overlay')
-let overlayGallery;
-let overlayBigImg;
-//lightbox
-let lightBox = document.querySelector('.lightbox')
-
-bigImg.addEventListener('click',onBigImgClick)
-
 function onBigImgClick(){
     if(window.innerWidth >= 875){
     if(overLay.childElementCount == 1){
@@ -248,8 +292,6 @@ function onBigImgClick(){
     }
 }
 
-
-
 //overlay actions 
 function onClickCloseOverlay(){
     overLay.classList.add('hidden');
@@ -267,9 +309,7 @@ function onThumbClickLightBox(event){
     overlayBigImg.src = event.target.src.replace('-thumbnail','') //change the name with empty
 }
 
-
 //overlay buttons 
-
 function btnClikedNextOverlay(){
     let imageIndex = getOverlayCurrentImgArr();
     imageIndex++;
@@ -292,7 +332,6 @@ function btnClikedPrevOverlay()
 }
 //clicking section ends
 
-
 //get current image in array used in clicked buttons
 function getOverlayCurrentImgArr(){
     const imageIndex =  parseInt(overlayBigImg.src.split('\\').pop().split('/').pop().replace('.jpeg', '').replace('image-product-',''));
@@ -309,3 +348,5 @@ function setOverlayBigImg(imageIndex){
    //set active pic
    overlayGallery[imageIndex-1].classList.add('active');  //minus one to make sure the whole array is taken care off
 }
+
+

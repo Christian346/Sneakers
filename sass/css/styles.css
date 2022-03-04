@@ -183,6 +183,11 @@ body {
   margin-right: 1em;
 }
 
+a {
+  text-decoration: none;
+  color: #68707d;
+}
+
 .orange-btn {
   font-weight: bolder;
   display: -webkit-box;
